@@ -11,7 +11,7 @@ elseif nargin < 3
     bTest = 0;
 end
 
-img = imread('D:\DI\face_data\orl_faces\s1\1.pgm');
+img = imread('D:\***');
 [imgRow, imgCol] = size(img);
 
 FaceContainer = zeros(nFacesPerPerson * nPerson, imgRow * imgCol);
