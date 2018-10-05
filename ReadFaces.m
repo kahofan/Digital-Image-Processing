@@ -20,7 +20,7 @@ faceLabel = zeros(nFacesPerPerson * nPerson, 1);
 for i = 1: nPerson
     i1 = mod(i, 10);
     i0 = char(i / 10);
-    strPath = 'D:\DI\face_data\orl_faces\s';
+    strPath = '***';
     if(i0 ~= 0)
         strPath = strcat(strPath, '0' + i0);
     end
