@@ -42,18 +42,3 @@ for i = 1: nPerson
 end
 
 save('FaceMat.mat', 'FaceContainer')    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
