@@ -5,8 +5,6 @@ Created on Fri Oct 26 13:41:42 2018
 @author: Lionel
 """
 
-import tensorflow as tf
-import numpy as np
 from matplotlib import pyplot as plt
 
 from tensorflow.examples.tutorials.mnist import input_data
