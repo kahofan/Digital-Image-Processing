@@ -68,19 +68,14 @@ cross_entropy = -tf.reduce_sum(y_*tf.log(y_conv))
 train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)
 correct_prediction = tf.equal(tf.argmax(y_conv, 1), tf.argmax(y_, 1))
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
-<<<<<<< HEAD
-sess.run(tf.global_variables_initializer())
-=======
+
 sess.run(tf.initialize_all_variables())
->>>>>>> 0517141101f240fbca7f76acc55528c0c5c74598
+
 for i in range(20000):
     batch = mnist.train.next_batch(50)
     if i % 100 == 0:
         train_accuracy = accuracy.eval(feed_dict={x: batch[0], y_: batch[1], keep_prob: 1.0})
         print("第%d步, 准确率为 %g%%" % (i, train_accuracy * 100))
     train_step.run(feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
-<<<<<<< HEAD
 print("识别正确率为 %g%%" % ((accuracy.eval(feed_dict={x: mnist.test.images, y_: mnist.test.labels, keep_prob: 1.0})) * 100))
-=======
-print("识别正确率为 %g%%"%((accuracy.eval(feed_dict={x: mnist.test.images, y_: mnist.test.labels, keep_prob: 1.0})) * 100))
->>>>>>> 0517141101f240fbca7f76acc55528c0c5c74598
+
